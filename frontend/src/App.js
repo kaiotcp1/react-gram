@@ -1,5 +1,10 @@
 import './App.css';
 
+// Components
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+
 // Pages
 import Home from './pages/Home/Home';
 import Login from './pages/Auth/Login';
@@ -13,11 +18,13 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/register' element={<Register />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
